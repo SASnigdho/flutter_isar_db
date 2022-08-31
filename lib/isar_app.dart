@@ -9,7 +9,7 @@ class IsarApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.green),
-      home: const HomePage(),
+      home:  HomePage(),
     );
   }
 }
