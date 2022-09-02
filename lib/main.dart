@@ -9,7 +9,10 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   final dir = await getApplicationSupportDirectory();
-  final isar = await Isar.open(schemas: [HadithSchema], directory: dir.path);
+  final Isar isar = await Isar.open(
+    schemas: [HadithSchema],
+    directory: dir.path,
+  );
 
-  runApp(const IsarApp());
+  runApp(IsarApp(isar: isar));
 }

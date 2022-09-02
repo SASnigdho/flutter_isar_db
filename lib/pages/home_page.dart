@@ -6,18 +6,9 @@ import '../models/contact.dart';
 
 // ignore: must_be_immutable
 class HomePage extends StatelessWidget {
-  HomePage({Key? key}) : super(key: key) {
-    _onInit();
-  }
+  const HomePage({Key? key, required this.isar}) : super(key: key);
 
-  late Isar _isar;
-
-  _onInit() async {
-    _isar = await Isar.open(
-      schemas: [ContactSchema],
-      directory: (await getApplicationSupportDirectory()).path,
-    );
-  }
+  final Isar isar;
 
   @override
   Widget build(BuildContext context) {
