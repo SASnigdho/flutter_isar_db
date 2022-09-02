@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:isar/isar.dart';
-import 'package:path_provider/path_provider.dart';
-
-import '../models/contact.dart';
 
 // ignore: must_be_immutable
 class HomePage extends StatelessWidget {
@@ -16,6 +13,22 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(),
 
       //  Body
+      body: Column(
+        children: [
+          ElevatedButton(onPressed: () {}, child: const Text('Load Json')),
+          ElevatedButton(onPressed: () {}, child: const Text('Search')),
+
+          //
+          Expanded(
+            child: ListView.builder(
+              itemCount: 10,
+              itemBuilder: (_, i) {
+                return Text('$i');
+              },
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
