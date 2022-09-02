@@ -1,8 +1,10 @@
 import 'package:isar/isar.dart';
+import 'package:json_annotation/json_annotation.dart';
 
 part 'hadith.g.dart';
 
 @Collection()
+@JsonSerializable()
 class Hadith {
   @Id()
   int? hadithId;
